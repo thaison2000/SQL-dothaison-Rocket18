@@ -87,23 +87,23 @@ foreign key (questionID) references question(questionID)
 
 insert into `department`(departmentName) values ("sale"),("marketing"),("Accounting department"),("Administration department"),("Customer Service department"),("programing department"),("Human Resources department"),("Research & Development department"),("Audit department"),("Financial department");
 insert into `position`(positionName) values ("dev"),("test"),("scrum-master"),("PM"),("manager"),("accountant"),("Director"),("Employee"),("Trainee"),("marketer");
-insert into `account`(email,userName,fullName,createTime,departmentID,positionID) values ("son@gmail.com","thaison","dothaison","2021-09-02",3,6),
-																 ("nam@gmail.com","vannam","ngovannam","2021-09-02",6,1),
-																 ("hung@gmail.com","duchung","tranduchung","2021-09-02",6,2),
-																 ("linh@gmail.com","vinhlinh","daovinhlinh","2021-09-02",6,3),
-                                                                 ("mai@gmail.com","huongmai","nguyenhuongmai","2021-09-02",6,4),
-                                                                 ("lan@gmail.com","phuonglan","nguyenphuonglan","2021-09-02",6,9),
-                                                                 ("tuan@gmail.com","ductuan","nguyenductuan","2021-09-02",6,9),
-                                                                 ("duong@gmail.com","daiduong","dodaiduong","2021-09-02",5,5),
-                                                                 ("hoang@gmail.com","anhhoang","trananhhoang","2021-09-02",2,10),
-                                                                 ("van@gmail.com","bichvan","nguyenbichvan","2021-09-02",2,10);
+insert into `account`(email,userName,fullName,createTime,departmentID,positionID) values  ("son@gmail.com","thaison","dothaison","2021-09-02",3,6),
+											  ("nam@gmail.com","vannam","ngovannam","2021-09-02",6,1),
+											  ("hung@gmail.com","duchung","tranduchung","2021-09-02",6,2),
+											  ("linh@gmail.com","vinhlinh","daovinhlinh","2021-09-02",6,3),
+                                                               				  ("mai@gmail.com","huongmai","nguyenhuongmai","2021-09-02",6,4),
+                                                               				  ("lan@gmail.com","phuonglan","nguyenphuonglan","2021-09-02",6,9),
+                                                               				  ("tuan@gmail.com","ductuan","nguyenductuan","2021-09-02",6,9),
+                                                               				  ("duong@gmail.com","daiduong","dodaiduong","2021-09-02",5,5),
+                                                                			  ("hoang@gmail.com","anhhoang","trananhhoang","2021-09-02",2,10),
+                                                                			  ("van@gmail.com","bichvan","nguyenbichvan","2021-09-02",2,10);
                                                                  
 
 insert into `group`(groupName,creatorID,createDate) values  ("team1",112,"2021-09-02"),
-															("team2",223,"2021-09-02"),
-															("team3",345,"2021-09-02"),
-															("team4",165,"2021-09-02"),
-															("team5",178,"2021-09-02"),
+							    ("team2",223,"2021-09-02"),
+							    ("team3",345,"2021-09-02"),
+							    ("team4",165,"2021-09-02"),
+							    ("team5",178,"2021-09-02"),
                                                             ("team6",134,"2021-09-02"),
                                                             ("team7",189,"2021-09-02"),
                                                             ("team8",111,"2021-09-02"),
@@ -111,7 +111,7 @@ insert into `group`(groupName,creatorID,createDate) values  ("team1",112,"2021-0
                                                             ("team10",137,"2021-09-02");
                                                             
 insert `groupaccount`(groupID,accountID,joinDate) values (1,2,"2021-09-04"),
-														 (1,3,"2021-09-04"),
+							 (1,3,"2021-09-04"),
                                                          (1,4,"2021-09-04"),
                                                          (1,5,"2021-09-04"),
                                                          (2,3,"2021-09-04"),
@@ -127,22 +127,22 @@ insert into `typequestion`(typeName) values ("essay"),("multiple-choice"),("Matc
 insert into `categoryquestion`(categoryName) values ("Java"),(".NET"),("SQL"),("C"),("HTML");
 
 insert into `question` (content, creatorID, createDate,categoryID,typeID) values (" what is abstract class in Java",123,"2021-09-04",1,2),
-																("how to insert data in mySQL",123,"2021-09-04",2,4),
-                                                                (" what is pointer in C",123,"2021-09-04",3,5),
-                                                                ("what is .NET",123,"2021-09-04",4,2),
-                                                                (" what is tag <input> in HTML",123,"2021-09-04",5,1);
+										 ("how to insert data in mySQL",123,"2021-09-04",2,4),
+                                                               			 (" what is pointer in C",123,"2021-09-04",3,5),
+                                                             			 ("what is .NET",123,"2021-09-04",4,2),
+                                                              			 (" what is tag <input> in HTML",123,"2021-09-04",5,1);
 
 insert into `answer`(content,questionID,isCorrect) values ("A class declared with the abstract keyword is called an abstract class. Abstract class can contain abstract methods and regular methods",1,TRUE),
-														("Multi-inheritance support",1,false),
-                                                        ("Only abstract methods",1,false),
-                                                        ("Only static and final variables",1,false),
-														("Use the insert into - values statement",2,TRUE),
-                                                        ("Pointer in C is a variable, it is also known as locator or indicator that indicates an address of a value",3,TRUE),
-                                                        ("NET is a web and software development framework. It is considered as one of the good and reliable frameworks. However, learning and understanding .NET framework is not simple. A lot of people love .NET for its 'language interoperability' - any language in .NET can use code written in another language.",4,TRUE),
-                                                        ("The HTML <input> or input tag in HTML is used to represent an input field where the user can enter data.",5,TRUE);
+							  ("Multi-inheritance support",1,false),
+                                                          ("Only abstract methods",1,false),
+                                                          ("Only static and final variables",1,false),
+							  ("Use the insert into - values statement",2,TRUE),
+                                                          ("Pointer in C is a variable, it is also known as locator or indicator that indicates an address of a value",3,TRUE),
+                                                          ("NET is a web and software development framework. It is considered as one of the good and reliable frameworks. However, learning and understanding .NET framework is not simple. A lot of people love .NET for its 'language interoperability' - any language in .NET can use code written in another language.",4,TRUE),
+                                                          ("The HTML <input> or input tag in HTML is used to represent an input field where the user can enter data.",5,TRUE);
 
 insert into `exam`(`code`,tittle,categoryID,duration,creatorID,createDate) values   (1101,"procifiency-test1",12,"02:00:00",113,"2021-09-04"),
-																					(1102,"procifiency-test2",15,"02:00:00",114,"2021-09-04"),
+										    (1102,"procifiency-test2",15,"02:00:00",114,"2021-09-04"),
                                                                                     (1104,"procifiency-test3",04,"02:00:00",133,"2021-09-04"),
                                                                                     (1107,"procifiency-test4",23,"02:00:00",121,"2021-09-04"),
                                                                                     (1108,"procifiency-test5",45,"03:00:00",153,"2021-09-04"),
