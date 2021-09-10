@@ -66,7 +66,7 @@ examID int auto_increment,
 `code` varchar(20),
 tittle varchar(200),
 categoryID int,
-duration varchar(200),
+duration time,
 creatorID int,
 createDate date
 );
