@@ -209,10 +209,12 @@ from `account`
 where fullName like "d%o";
 
 -- xoa tat ca exam duoc tao truoc ngay 20/12/2019
+SET SQL_SAFE_UPDATES = 0;
 delete from `exam`
 where createDate < "2019-12-20";
 
 -- xoa tat ca question co noi dung bat dau bang tu cau hoi
+SET SQL_SAFE_UPDATES = 0;
 delete from `question`
 where content like "cau hoi%";
 
