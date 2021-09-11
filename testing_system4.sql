@@ -269,7 +269,7 @@ having count(answer.answerID) = 0;
 select groupaccount.accountID
 from groupaccount
 where groupID = 1
-union distinct
+union 
 select groupaccount.accountID
 from groupaccount
 where groupID = 2;
