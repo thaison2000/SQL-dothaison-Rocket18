@@ -48,9 +48,9 @@ from question
 join answer on question.questionID = answer.questionID
 group by question.typeID
 having count(answer.questionID) = (select max(abc) from ( select count(answer.questionID) as abc
-														from question
-														join answer on question.questionID = answer.questionID
-														group by question.typeID )as subquery);
+							  from question
+							  join answer on question.questionID = answer.questionID
+						 	  group by question.typeID )as subquery);
 end $$
 delimiter ;
 
@@ -66,9 +66,9 @@ join answer on question.questionID = answer.questionID)
 join typequestion on typequestion.typeID = question.typeID
 group by question.typeID
 having count(answer.questionID) = (select max(abc) from ( select count(answer.questionID) as abc
-														from question
-														join answer on question.questionID = answer.questionID
-														group by question.typeID )as subquery);
+							  from question
+							  join answer on question.questionID = answer.questionID
+						  	  group by question.typeID )as subquery);
 end $$
 delimiter ;
 
@@ -160,7 +160,7 @@ begin
 update `account`
 set departmentID = 100
 where departmentID =   (select departmentID
-						from department
+			from department
                         where departmentName = in_departmentname);
                         
 delete from department
